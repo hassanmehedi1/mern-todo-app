@@ -11,6 +11,7 @@ app.use(express.json());
 
 
 app.use("/api/testing", require("./routes/test"))
+app.use("/api/todo", require("./routes/todotask"));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
