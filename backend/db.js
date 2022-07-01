@@ -1,12 +1,14 @@
 const mongoose = require("mongoose");
 
 const mongoURI =
-  "mongodb://localhost:27017/TodoApp?readPreference=primary&appname=MongoDB%20Compass&ssl=false";
+  "mongodb+srv://todo_admin:e5JyLKNrG3Pdsr32@cluster0.o94kq.mongodb.net/TodoApp?retryWrites=true&w=majority";
 
 const connectToMongo = () => {
   mongoose.connect(mongoURI, () => {
     console.log("Database Connected Boss");
   });
 };
+
+console.log(mongoURI);
 
 module.exports = connectToMongo;
